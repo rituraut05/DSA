@@ -1,0 +1,31 @@
+﻿			TIME COMPLEXITY ANALYSIS
+		Bubble sort
+	The simplest sorting algorithm is bubble sort. The bubble sort works by iterating down an array to be sorted from the first element to the last, comparing each pair of elements and switching their positions if necessary. This process is repeated as many times as necessary, until the array is sorted. Since the worst case scenario is that the array is in reverse order, and that the first element in sorted array is the last element in the starting array, the most exchanges that will be necessary is equal to the length of the array. 
+
+Case 1) O(n) (Best case) This time complexity can occur if the array is already sorted, and that means that no swap occurred and only 1 iteration of n elements
+Case 2) O(n^2) (Worst case) The worst case is if the array is already sorted but in descending order. This means that in the first iteration it would have to look at n elements, then after that it would look n - 1 elements (since the biggest integer is at the end) and so on and so forth till 1 comparison occurs. Big Oh = n + n - 1 + n - 2 ... + 1 = (n*(n + 1))/2 = O(n^2)
+In your example, it may not examine these many elements in each phase as the array is not in descending order.
+		Selection sort
+	Selection sort is the most conceptually simple of all the sorting algorithms. It works by selecting the smallest (or largest, if you want to sort from big to small) element of the array and placing it at the head of the array. Then the process is repeated for the remainder of the array; the next largest element is selected and put into the next slot, and so on down the line. 
+	Because a selection sort looks at progressively smaller parts of the array each time (as it knows to ignore the front of the array because it is already in order), a selection sort is slightly faster than bubble sort, and can be better than a modified bubble sort. 
+The first loop goes from 0 to n, and the second loop goes from x to n, so it goes from 0 to n, then from 1 to n, then from 2 to n and so on. The multiplication works out so that the efficiency is n*(n/2), though the order is still O(n^2). 
+
+Average number of comparisons:
+Bubble sort: 12(N2 − NlnN − (γ + ln2 −1)N) + (N‾‾√)
+Selection sort: (N+1)HN−2N
+
+  	From the plotted graph we can see, bubble sort is much worse as the number of elements increases, even though both sorting methods have the same asymptotic complexity.
+This analysis is based on the assumption that the input is random - which might not be true all the time. However, before we start sorting we can randomly permute the input sequence  to obtain the average case.
+The asymptotic cost, (theta notaion) notation, describes the limiting behaviour of a function as its argument tends to infinity, i.e. its growth rate. 
+
+	The function itself, e.g. the number of comparisons and/or swaps, may be different for two algorithms with the same asymptotic cost, provided they grow with the same rate.
+More specifically, Bubble sort requires, on average, n/4
+swaps per entry (each entry is moved element-wise from its initial position to its final position, and each swap involves two entries), while Selection sort requires only 1
+(once the minimum/maximum has been found, it is swapped once to the end of the array).
+In terms of the number of comparisons, Bubble sort requires k×n
+comparisons, where k is the maximum distance between an entry's initial position and its final position, which is usually larger than n/2 for uniformly distributed initial values. Selection sort, however, always requires (n−1)×(n−2)/2
+comparisons.
+In summary, the asymptotic limit gives you a good feel for how the costs of an algorithm grow with respect to the input size, but says nothing about the relative performance of different algorithms within the same set.
+
+		
+	

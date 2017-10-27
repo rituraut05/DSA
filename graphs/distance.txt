@@ -1,0 +1,6 @@
+Pune	Mumbai	5
+Pune	Nagpur	27
+Mumbai	Nashik	8
+Mumbai	Aurangabad	10
+Nashik	Aurangabad	1
+Aurangabad	Nagpur	12
